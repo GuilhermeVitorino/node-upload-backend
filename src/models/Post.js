@@ -12,6 +12,7 @@ const PostSchema = new mogoose.Schema({
     size: Number,
     key: String,
     url: String,
+    type: String,
     createdAt: {
         type: Date,
         default: Date.now,

@@ -13,7 +13,9 @@ routes.get("/posts", async (req, res) => {
 
 routes.post("/posts", multer(multerConfig).single('file'), async (req, res) => {
 
-    const { originalname: name, size, key, location: url} = req.file;
+    console.log(req);
+
+    const { originalname: name, size, key, location: url, contentType: type} = req.file;
     const { restriction } = req.body;
 
     const post = await Post.create({
@@ -21,7 +23,8 @@ routes.post("/posts", multer(multerConfig).single('file'), async (req, res) => {
         restriction,
         size,
         key,
-        url
+        url,
+        type
     });
 
     return res.json(post);
