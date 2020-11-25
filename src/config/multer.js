@@ -50,7 +50,11 @@ module.exports = {
             'image/pjpeg',
             'image/png',
             'image/gif',
-            'application/pdf'
+            'application/pdf',
+            'application/doc',
+            'application/ms-doc',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
         ];
 
         if(allowedMimes.includes(file.mimetype)) {
