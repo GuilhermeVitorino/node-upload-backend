@@ -54,7 +54,12 @@ module.exports = {
             'application/doc',
             'application/ms-doc',
             'application/msword',
-            'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'application/excel',
+            'application/vnd.ms-excel',
+            'application/x-excel',
+            'application/x-msexcel',
+            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         ];
 
         if(allowedMimes.includes(file.mimetype)) {
